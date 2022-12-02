@@ -1,4 +1,20 @@
 <div class="container m-5">
   <h1>Demo1</h1>
+  <br>
+  <h2>Property bindings</h2>
+  <input class="form-control pt-2" type="text" [(ngModel)]="maVariable">
+  <p class="pt-2">{{maVariable}}</p>
+  <br>
+  <h2>Event binding</h2>
+  <input type="button" class="btn btn-info" (click)="maMethode()" value="Click">
+  <p>{{maVariableClick}}</p>
+  <br>
+  <h2>Attribute Binding</h2>
+  <span class="m-2">
+    <input type="button" class="btn btn-info" (click)="reversIsActive()" value="Click">
+  </span>
+  <span>
+    <input type="button" class="btn btn-info" [disabled]="isActive" value="Test">
+  </span>
 </div>
 
