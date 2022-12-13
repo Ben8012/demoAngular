@@ -6,9 +6,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./demo1.component.scss']
 })
 export class Demo1Component {
-  maVariable : string = "coucou";
-
+  maVariable : string = "coucou"
   maVariableClick : string ="pas click"
+  testVariable:string =""
 
   isActive : boolean = false
 
@@ -23,5 +23,10 @@ export class Demo1Component {
 
   reversIsActive(){
     this.isActive = !this.isActive
+    this.testVariable=""
+  }
+
+  testIsActive(){
+    this.testVariable = "le boutton est actif"
   }
 }

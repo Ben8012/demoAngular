@@ -14,7 +14,8 @@
     <input type="button" class="btn btn-info" (click)="reversIsActive()" value="Click">
   </span>
   <span>
-    <input type="button" class="btn btn-info" [disabled]="isActive" value="Test">
+    <input type="button" class="btn btn-info" [disabled]="isActive" (click)="testIsActive()" value="Test">
   </span>
+  <span class="m-2">{{testVariable}}</span>
 </div>
 

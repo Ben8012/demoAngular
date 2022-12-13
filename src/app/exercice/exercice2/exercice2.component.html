@@ -1,0 +1,27 @@
+<div class="container">
+  <h2 class="text-center">Exercice 2 Formulaire </h2>
+  <form (ngSubmit)="handlerSubmit()">
+    <app-form-input label="Name" type="text" [(value)]="user.name"></app-form-input>
+    <app-form-input label="Password" type="password" [(value)]="user.password"></app-form-input>
+    <app-form-input label="Addresse" type="text" [(value)]="user.adresse"></app-form-input>
+    <input type="submit" value="Envoyer">
+  </form>
+
+  <div class="m-3">
+    <h4>Resultat</h4>
+    <!-- {{user | json}} -->
+  </div>
+
+  <div class ="d-flex flex-wrap align-content-around">
+    <button class="btn btn-info m-3 p-3" *ngFor="let user of users" [ngStyle]="{'border': ' 1px solid black'}" (click)="updateUser(user)" >
+
+      <p> {{user.id}}</p>
+      <p> {{user.name}}</p>
+      <p> {{user.password}}</p>
+      <p> {{user.adresse}}</p>
+
+  </button>
+
+  </div>
+
+</div>
